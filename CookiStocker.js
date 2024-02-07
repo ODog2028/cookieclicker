@@ -844,7 +844,7 @@ setTimeout(function waitForGame() {
 var stockerStopTrading = false;
 
 // Announce transactions in game notifications
-var stockerTransactionNotifications = false;
+var stockerTransactionNotifications = true;
 
 // Make regular profit reports
 var stockerActivityReport = false;
