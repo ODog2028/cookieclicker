@@ -59,4 +59,4 @@ This make of Cookie Clicker includes the following mods:
 
 -   [Cookie Monster](https://github.com/CookieMonsterTeam/CookieMonster "Cookie Monster")
 -   [CookiStocker](https://steamcommunity.com/sharedfiles/filedetails/?id=2599187047 "CookiStocker")
-    The mod CookiStocker has the setting option `stockerTransactionNotifications` set to `true`
+    The mod CookiStocker has the setting option `stockerTransactionNotifications` set to `true`. I have added a button to the UI to allow the user to turn on and off the CookiStocker mod.
