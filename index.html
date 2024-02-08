@@ -85,6 +85,24 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
         <![endif]-->
 
         <!--[if lt IE9]><script src="excanvas.compiled.js"></script><![endif]-->
+        <script>
+            function toggleCookiStocker1() {
+                if (stockerStopTrading) {
+                    document.getElementById("cookiStockerToggle").innerHTML =
+                        "Turn Off CookiStocker";
+                    stockerStopTrading = false;
+                } else {
+                    document.getElementById("cookiStockerToggle").innerHTML =
+                        "Turn On CookiStocker";
+                    stockerStopTrading = true;
+                }
+            }
+        </script>
+        <style>
+            .d-none {
+                display: none;
+            }
+        </style>
     </head>
     <body>
         <div id="wrapper">
@@ -390,6 +408,13 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
                 <div id="sectionRight" class="inset">
                     <div id="store">
                         <div id="storeTitle" class="inset title zoneTitle">Store</div>
+                        <button
+                            onclick="toggleCookiStocker1()"
+                            id="cookiStockerToggle"
+                            class="d-none"
+                        >
+                            Turn Off CookiStocker
+                        </button>
                         <div id="toggleUpgrades" class="storeSection upgradeBox"></div>
                         <div id="techUpgrades" class="storeSection upgradeBox"></div>
                         <div id="vaultUpgrades" class="storeSection upgradeBox"></div>
@@ -409,9 +434,10 @@ Feel free to alter this code to your liking, but please do not re-host it, do no
                 Game.LoadMod(
                     "https://cookiemonsterteam.github.io/CookieMonster/dist/CookieMonster.js"
                 );
-                var my_awesome_script = document.createElement("script");
-                my_awesome_script.setAttribute("src", "CookiStocker.js");
-                document.head.appendChild(my_awesome_script);
+                var cookiStockerScript = document.createElement("script");
+                cookiStockerScript.setAttribute("src", "CookiStocker.js");
+                document.head.appendChild(cookiStockerScript);
+                document.getElementById("cookiStockerToggle").classList.remove("d-none");
             }, 3000);
         </script>
     </body>
