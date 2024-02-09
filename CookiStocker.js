@@ -205,7 +205,7 @@ setTimeout(function waitForGame() {
                 if (stockerForceLoopUpdates)
                     Game.Objects["Bank"].minigame.secondsPerTick = stockerLoopFrequency / 1000;
                 var stockerLoop = setInterval(function () {
-                    if (stockerStopTrading) {
+                    if (!stockerStopTrading) {
                         let doUpdate = false;
 
                         // setting stockerForceLoopUpdates to true will make the logic loop force the market to tick every time it triggers,
